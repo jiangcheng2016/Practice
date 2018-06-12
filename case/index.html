@@ -11,7 +11,75 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <style type="css/text">
-    
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+            overflow: hidden;
+        }
+        body{
+            margin:0;
+            padding:0;
+            background:#ef94ac; /* 设置游戏背景为粉色*/
+            position: relative;
+        }
+        #loading{
+            position:fixed;
+            width: 100%;
+            height:100%;
+            z-index: 100;
+            background:#ef94ac;
+            font-size:0;
+        }
+        #loading::after{
+            content: '';
+            /*设置背景位图及大小*/
+            background:url("i/loading.png") no-repeat;
+            background-size: cover;
+            width:100px;
+            height:100px;
+            /* 设置位图在屏幕中央显示*/
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+        }
+        #scene1{
+            left:0;
+        }
+        #scene2{
+            left:100%;
+        }
+        #scene3{
+            left:100%;
+            background:url(i/result.jpg) no-repeat 50% 50%;
+            background-size: cover;
+        }
+        #scene1,#scene2,#scene3{
+            /* 设置宽度和高度，使三个界面都充满屏幕*/
+            width:100%;
+            height:100%;
+            position:absolute
+        }
+        .slogan-img{
+            opacity:0;
+            font-size:0;
+            position:absolute;
+            left:50%;
+            transform:translateX(-50%);
+            -webkit-transform:translateX(-50%);
+        }
+        .slogan-text{
+            
+            opacity: 0;
+            position:absolute;
+            color:#fff;
+            font-size:12px;
+            text-align:center;
+        }
     </style>
 </head>
 <body>

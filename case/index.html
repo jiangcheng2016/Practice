@@ -160,6 +160,31 @@
             margin-left: -71px;
             position:absolute;
         }
+        #musicplayer{
+            position: absolute;
+            left:0;
+            top:0;
+            width:100%;
+        }
+        #musicplayer button{
+            position: absolute;
+            right:10px;
+            top:10px;
+            width:30px;
+            height:30px;
+            border:0;   /* 去除按钮默认自带的边框*/
+        }
+        #musiccon{
+            background:url(i/musicon.png);
+            background-size:cover;
+        }
+        #musicoff{
+            background:url(i/musicoff.png);
+            background-size:cover;
+        }
+        .hidden{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -194,5 +219,28 @@
         <button id="musicoff"></button>
         <audio src="loop.mp3" loop id="music"></audio>
     </div>
+    <script type="text/javascript">
+        window.onload = function(){
+            document.getElementById("loading").style.display = "none";
+        };
+        var sbtn = document.getElementById("sbtn");
+        var lbtn = document.getElementById("lbtn");
+        var scene1 = document.getElementById("scene1");
+        var scene2 = document.getElementById("scene2");
+        var scene3 = document.getElementById("scene3");
+        var t0 = document.getElementById("t0");
+        var t1 = document.getElementById("t1");
+        var t2 = document.getElementById("t2");
+        var t3 = document.getElementById("t3");
+        var t4 = document.getElementById("t4");
+        var t5 = document.getElementById("t5");
+        var t6 = document.getElementById("t6");
+        var t7 = document.getElementById("t7");
+        var ercode = document.getElementById("ercode");
+        var heart = document.getElementById("heart");
+        var music = document.getElementById("music");
+        var musicoff = document.getElementById("musicoff");
+        var musiccon = document.getElementById("musiccon");
+    </script>
 </body>
 </html>
